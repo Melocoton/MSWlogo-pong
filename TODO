@@ -1,0 +1,22 @@
+----Rebotes
+
+desviacion aleatoria
+haz "dal azar 45
+
+Arriba de derecha a izquierda               
+si y :rumb (<90) (>0) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
+Arriba de izquierda a derecha
+si y :rumb (<270) (>180) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
+Abajo de derecha a izquierda
+si y :rumb (<180) (>90) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
+Abajo de izquierda a derecha
+si y :rumb (<360) (>270) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
+
+
+---Crear un buen sistema de numeros aleatorios (esto seguramnte lo haga yo)
+---Limpiar y ordenar un poquito el codigo que lo dejamos echo un guarrete (importante) (esto me da mucha pereza, que lo haga Luis)
+---Hacer un marco con el paint para no tener que dibujarlo a cada rato y hacer lo bordes mas gruesos para que la tortuga detecte bien las lineas y no se las salte, alomejor tambien bajarle un poquito la cantidad de distancia que avanza de golpe por tiempo y reducir el tiempo
+---Cambiar el grosor de los circulos para ahorrarnos el rellena (menos el de la pelota)
+---Cambiar las raquetas de un circulo a un rectangulido
+---Terminar el juego
+---Enseñarselo a JC y que nos apruebe con un 13
