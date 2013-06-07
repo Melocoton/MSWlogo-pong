@@ -1,0 +1,164 @@
+para bordes
+
+activa 3
+pongrosor [0 40]
+sl  ponpos [499 499] ponrumbo 270 bl poncl [0 0 0]  av 999 
+sl ponpos [-499 -499] ponrumbo 90 bl av 999
+sl ponpos [499 -499] ponrumbo 0 bl poncl [0 255 255] av 999
+sl ponpos [-499 -499] ponrumbo 0 bl poncl [255 255 0] av 999
+poncl [0 0 0] 
+fin 
+
+para cojerpos
+
+activa 0
+haz "pos0 pos
+haz "rumb0 rumbo
+
+activa 1
+haz "pos1 pos
+haz "rumb1 rumbo
+
+activa 2
+haz "pos2 pos
+haz "rumb2 rumbo
+
+fin
+
+para coloca
+
+activa 0
+sl
+ponpos [-400 0]
+ponrumbo 0
+
+ 
+
+activa 1
+sl
+ponpos [400 0]
+ponrumbo 0
+
+activa 2
+sl
+ponpos [0 0]
+saqueazar
+
+fin
+
+para control
+
+haz "tecla car lc
+
+activa 0
+si :tecla = 1 [av 20]
+si :tecla = 2 [retrocede 20]
+
+activa 1
+si :tecla = 8 [av 20]
+si :tecla = 9 [retrocede 20]
+
+fin
+
+para juego
+;;bordes 
+coloca
+haz "velocidad 5
+ponfoco [Pantalla de MSWLogo]
+ponteclado [control]
+
+siempre [
+
+activa 0
+bl 
+poncolorlapiz [255 0 0]
+circulo 40
+poncolorrelleno [255 0 0]
+rellena
+sl
+
+activa 1
+bl 
+poncolorlapiz [0 0 255]
+circulo 40
+poncolorrelleno [0 0 255]
+rellena
+sl
+
+activa 2
+bl 
+poncolorlapiz [0 255 0]
+circulo 15
+poncolorrelleno [0 255 0]
+rellena
+sl
+
+av 10 espera :velocidad
+cojerpos
+bp
+pos2
+activa 0
+ot
+activa 1
+ot
+activa 2
+ot
+]
+
+fin
+
+para pos2
+;;bordes 
+activa 0
+ponpos :pos0
+ponrumbo :rumb0
+
+activa 1
+ponpos :pos1
+ponrumbo :rumb1
+
+activa 2
+ponpos :pos2
+ponrumbo :rumb2
+
+fin
+
+para rebotes
+activa 2
+
+si pixel = [255 255 255] [
+si y (:rumb2<180) (:rumb2>90) [ponrumbo :rumb2-90]
+si y (:rumb2<270) (:rumb2>180) [ponrumbo :rumb2+90]
+si y (:rumb2<90) (:rumb2>0) [ponrumbo :rumb2+90]
+si y (:rumb2<360) (:rumb2>270) [ponrumbo :rumb2-90]
+
+]
+
+
+si pixel = [255 255 0] ponrumbo   ;amarillo
+fin
+
+para saqueazar
+haz "az0 azar 254
+haz "az1 azar 254
+haz "az2 azar 45
+
+haz "mod modulo :az0 2
+si :mod =0 [ponrumbo 90] [ponrumbo 270]
+haz "mod modulo :az1 2
+si :mod = 0 [gd :az2] [gi :az2]
+fin
+
+Haz "a 1
+Haz "az0 182
+Haz "az1 193
+Haz "az2 44
+Haz "mod 1
+Haz "pos0 [-400 320]
+Haz "pos1 [400 20]
+Haz "pos2 [351.770853 133.833221]
+Haz "rumb0 0
+Haz "rumb1 0
+Haz "rumb2 46
+Haz "tecla 1
+Haz "velocidad 5
