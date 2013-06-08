@@ -1,6 +1,6 @@
 ----Rebotes
 
-desviacion aleatoria
+desviacion aleatoria (es un poco raro esto) "dald o dal, si es = a 0 sumar 90 + 0? no lo pillo)
 haz "dal azar 45
 
 Arriba de derecha a izquierda               
@@ -29,3 +29,13 @@ siempre [av 10  espera 1 gi :alfa haz "alfa :alfa+1]
 fin
 
 he dibujado el paint y estoy con los angulos, ya lo consegui pero el mswlogo me trolea y crashea y me toca repetirlo
+
+hay queda la reflexion angular, seguramente se podria simplificar, pero es tarde y estoy poco creativo
+para rebotescool
+si pixel = [0 0 0] [
+si y (:rumb2<180) (:rumb2>90) [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa] ;abajo derecha 
+si y (:rumb2<270) (:rumb2>180) [haz "alfa :rumb2-180 ponrumbo 360-:alfa] ;abajo izquierda
+si y (:rumb2<90) (:rumb2>0) [ponrumbo 180-:rumb2] ;arriba derecha
+si y (:rumb2<360) (:rumb2>270) [haz "alfa 360-:rumb2 ponrumbo 180+:alfa]] ;arriba izquerda
+fin
+
