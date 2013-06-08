@@ -1,7 +1,6 @@
-----Rebotes
+'he ordenado un pelin el codigo y lo e optimizado un poco pero aun queda bastante trabajo (borra esto cuando lo hayas leido)
 
-desviacion aleatoria (es un poco raro esto) "dald o dal, si es = a 0 sumar 90 + 0? no lo pillo)
-haz "dal azar 45
+----Rebotes, por testear pero me gusta tu version, la mia era un poco liosa pero segun los calculos que habia echo en clase de mates deberia funcionar bien
 
 Arriba de derecha a izquierda               
 si y :rumb (<90) (>0) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
