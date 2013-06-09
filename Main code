@@ -63,7 +63,7 @@ marco
 activa 0
 bl 
 poncolorlapiz [255 0 0]
-circle 40
+rectangulo
 poncolorrelleno [255 0 0]
 rellena
 sl
@@ -71,7 +71,7 @@ sl
 activa 1
 bl 
 poncolorlapiz [0 0 255]
-circle 40
+rectangulo
 poncolorrelleno [0 0 255]
 rellena
 sl
@@ -143,6 +143,26 @@ si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo 18
 ] 
 fin
 
+para rectangulo
+haz "posi0 pos
+sl
+av 30
+gd 90
+bl
+av 10
+gd 90
+av 60
+gd 90
+av 20
+gd 90
+av 60
+gd 90
+av 10
+gi 90
+sl
+ponpos :posi0
+fin
+
 para saqueazar
 
 haz "az0 azar 255
@@ -153,4 +173,5 @@ si :mod = 0 [ponrumbo 90] [ponrumbo 270]
 haz "mod modulo :az1 2
 si :mod = 0 [gd :az2] [gi :az2]
 fin
+
 
