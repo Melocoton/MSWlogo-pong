@@ -44,6 +44,12 @@ si :tecla = 8 [av 20]
 si :tecla = 9 [retrocede 20]
 fin
 
+para desviacion
+haz "dv0 azar 255 
+haz "dv1 azar 45
+haz "mod1 modulo :dv0 2
+fin
+
 para juego 
 
 coloca
@@ -128,21 +134,22 @@ ponrumbo :rumb2
 fin
 
 para rebotescool
+desviacion
 si pixel = [0 0 0] [
-si y (:rumb2<180) (:rumb2>90) [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa]   ;abajo derecha 
-si y (:rumb2<270) (:rumb2>180) [haz "alfa :rumb2-180 ponrumbo 360-:alfa]     ;abajo izquierda
-si y (:rumb2<90) (:rumb2>0) [ponrumbo 180-:rumb2]                            ;arriba derecha
-si y (:rumb2<360) (:rumb2>270) [haz "alfa 360-:rumb2 ponrumbo 180+:alfa]     ;arriba izquerd
+si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa - :dv1]]   ;abajo derecha 
+si y (:rumb2<270) (:rumb2>180) [si :mod1 = 0 [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa + :dv1] [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa - :dv1]]     ;abajo izquierda
+si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [ponrumbo 180 - :rumb2 + :dv1] [ponrumbo 180 - :rumb2 - :dv1]]                            ;arriba derecha
+si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa + :dv1] [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa - :dv1]]     ;arriba izquerd
 ] 
 fin
 
 para saqueazar
 
-haz "az0 azar 254
-haz "az1 azar 254
+haz "az0 azar 255
+haz "az1 azar 255
 haz "az2 azar 45
 haz "mod modulo :az0 2
-si :mod =0 [ponrumbo 90] [ponrumbo 270]
+si :mod = 0 [ponrumbo 90] [ponrumbo 270]
 haz "mod modulo :az1 2
 si :mod = 0 [gd :az2] [gi :az2]
 fin
