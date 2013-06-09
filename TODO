@@ -2,7 +2,10 @@
 
 ---Crear un buen sistema de numeros aleatorios (no se si se podra llevar a cabo pero demomento vamos tirando con algun apaño)
 ---Cambiar el grosor de los circulos para ahorrarnos el rellena (menos el de la pelota)
----Cambiar las raquetas de un circulo a un rectangulido
+---Cambiar las raquetas de un circulo a un rectangulido (hecho) pero hay que mejorar el procedimiento un poco
+---Añadir rebotes a las raquetas
+---Añadir que se puedan marcar puntos
+---Sonidos (esto lo hago yo)
 ---Terminar el juego
 ---Enseñarselo a JC y que nos apruebe con un 13
 
