@@ -1,4 +1,3 @@
-
 para cojerpos
 
 activa 0
@@ -13,7 +12,6 @@ activa 2
 haz "pos2 pos
 haz "rumb2 rumbo
 fin
-
 
 para coloca
 
@@ -33,7 +31,6 @@ ponpos [0 0]
 saqueazar
 fin
 
-
 para control
 
 haz "tecla car lc
@@ -47,21 +44,20 @@ si :tecla = 8 [av 20]
 si :tecla = 9 [retrocede 20]
 fin
 
-
 para juego 
 
-cargadib "C:/Users/Jaime/Desktop/borde.bmp
 coloca
-haz "velocidad 1
+haz "velocidad 2
 ponfoco [Pantalla de MSWLogo]
 ponteclado [control]
 
 siempre [
+marco
 
 activa 0
 bl 
 poncolorlapiz [255 0 0]
-circulo 40
+circle 40
 poncolorrelleno [255 0 0]
 rellena
 sl
@@ -69,7 +65,7 @@ sl
 activa 1
 bl 
 poncolorlapiz [0 0 255]
-circulo 40
+circle 40
 poncolorrelleno [0 0 255]
 rellena
 sl
@@ -78,14 +74,13 @@ activa 2
 bl 
 rebotescool
 poncolorlapiz [0 255 0]
-circulo 15
+circle 15
 poncolorrelleno [0 255 0]
 rellena
 sl
 av 10 espera :velocidad
 cojerpos
 bp
-bordes
 pos2
 activa 0
 ot
@@ -96,6 +91,25 @@ ot
 ]
 fin
 
+para marco
+activa 3
+sl
+ponpos [0 0]
+ot
+ponpos [-500 500]
+poncolorlapiz [0 0 0]
+pongrosor [0 80]
+bl
+ponrumbo 90
+av 999
+ponrumbo 180
+av 999
+ponrumbo 270
+av 999
+ponrumbo 0
+av 999
+pongrosor [0 5]
+fin
 
 para pos2
 
@@ -121,7 +135,6 @@ si y (:rumb2<90) (:rumb2>0) [ponrumbo 180-:rumb2]                            ;ar
 si y (:rumb2<360) (:rumb2>270) [haz "alfa 360-:rumb2 ponrumbo 180+:alfa]     ;arriba izquerd
 ] 
 fin
- 
 
 para saqueazar
 
@@ -133,3 +146,4 @@ si :mod =0 [ponrumbo 90] [ponrumbo 270]
 haz "mod modulo :az1 2
 si :mod = 0 [gd :az2] [gi :az2]
 fin
+
