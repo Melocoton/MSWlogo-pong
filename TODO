@@ -1,39 +1,14 @@
+----Rebotes (hecho)
 
-----Rebotes, por testear pero me gusta tu version, la mia era un poco liosa pero segun los calculos que habia echo en clase de mates deberia funcionar bien
-
-Arriba de derecha a izquierda               
-si y :rumb (<90) (>0) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
-Arriba de izquierda a derecha
-si y :rumb (<270) (>180) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
-Abajo de derecha a izquierda
-si y :rumb (<180) (>90) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
-Abajo de izquierda a derecha
-si y :rumb (<360) (>270) [si :dald=0 [ponrumbo :rumb+90+:dal] [ponrumbo :rumb+90-:dal]] hay que cambiar los signos y puede que el orden no he tenido tiempo de testearlo
-
-
----Crear un buen sistema de numeros aleatorios (esto seguramnte lo haga yo)
----Limpiar y ordenar un poquito el codigo que lo dejamos echo un guarrete (importante) (esto me da mucha pereza, que lo haga Luis)
----Hacer un marco con el paint para no tener que dibujarlo a cada rato y hacer lo bordes mas gruesos para que la tortuga detecte bien las lineas y no se las salte, alomejor tambien bajarle un poquito la cantidad de distancia que avanza de golpe por tiempo y reducir el tiempo
+---Crear un buen sistema de numeros aleatorios (no se si se podra llevar a cabo pero demomento vamos tirando con algun apaño)
 ---Cambiar el grosor de los circulos para ahorrarnos el rellena (menos el de la pelota)
 ---Cambiar las raquetas de un circulo a un rectangulido
 ---Terminar el juego
 ---Enseñarselo a JC y que nos apruebe con un 13
 
-dale caña a esta ecuacion, es to bonita moldeala a conciencia 
+dale caña a esta ecuacion, es to bonita moldeala a conciencia (no lo entiendo)
 para lol
 bp
 haz "alfa 1
 siempre [av 10  espera 1 gi :alfa haz "alfa :alfa+1]
 fin
-
-he dibujado el paint y estoy con los angulos, ya lo consegui pero el mswlogo me trolea y crashea y me toca repetirlo
-
-hay queda la reflexion angular, seguramente se podria simplificar, pero es tarde y estoy poco creativo
-para rebotescool
-si pixel = [0 0 0] [
-si y (:rumb2<180) (:rumb2>90) [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa] ;abajo derecha 
-si y (:rumb2<270) (:rumb2>180) [haz "alfa :rumb2-180 ponrumbo 360-:alfa] ;abajo izquierda
-si y (:rumb2<90) (:rumb2>0) [ponrumbo 180-:rumb2] ;arriba derecha
-si y (:rumb2<360) (:rumb2>270) [haz "alfa 360-:rumb2 ponrumbo 180+:alfa]] ;arriba izquerda
-fin
-
