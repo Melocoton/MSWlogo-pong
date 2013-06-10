@@ -1,5 +1,6 @@
 ----Rebotes (hecho) he encontrado un fallo cuando salen grados del tipo, 0 90 180 270, al tener que ser mayor o menor esos no estan incluidos y no rebotan,
 hay que poner alguna tonteria para eso
+tambien se cuela bastante en los bordes y se pone loco
 
 ---Crear un buen sistema de numeros aleatorios (no se si se podra llevar a cabo pero demomento vamos tirando con algun apaño)
 ---Cambiar el grosor de los circulos para ahorrarnos el rellena (menos el de la pelota)
