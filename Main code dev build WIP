@@ -1,0 +1,218 @@
+para cojerpos
+
+activa 0
+haz "pos0 pos
+haz "rumb0 rumbo
+
+activa 1
+haz "pos1 pos
+haz "rumb1 rumbo
+
+activa 2
+haz "pos2 pos
+haz "rumb2 rumbo
+fin
+
+para coloca
+
+activa 0
+sl
+ponpos [-400 0]
+ponrumbo 0
+
+activa 1
+sl
+ponpos [400 0]
+ponrumbo 0
+
+activa 2
+sl
+ponpos [0 0]
+saqueazar
+fin
+
+para control
+
+haz "tecla car lc
+
+activa 0
+si :tecla = 1 [av 20]
+si :tecla = 2 [retrocede 20]
+
+activa 1
+si :tecla = 8 [av 20]
+si :tecla = 9 [retrocede 20]
+fin
+
+para desviacion
+haz "dv0 azar 255 
+haz "dv1 azar 45
+haz "mod1 modulo :dv0 2
+fin
+
+para juego 
+
+coloca
+haz "velocidad 2
+ponfoco [Pantalla de MSWLogo]
+ponteclado [control]
+
+siempre [
+marco
+
+activa 0
+bl 
+poncolorlapiz [255 0 0]
+rectangulo
+poncolorrelleno [255 0 0]
+rellena
+sl
+
+activa 1
+bl 
+ponrumbo 0
+poncolorlapiz [0 0 255]
+rectangulo
+poncolorrelleno [0 0 255]
+rellena
+sl
+
+activa 2
+bl 
+rebotescool
+poncolorlapiz [0 255 0]
+circle 15
+poncolorrelleno [0 255 0]
+rellena
+sl
+av 10 espera :velocidad
+cojerpos
+bp
+pos2
+
+activa 0
+ot
+activa 1
+ot
+activa 2
+ot
+]
+fin
+
+para marco
+activa 3
+sl
+ponpos [0 0]
+ot
+ponpos [-500 500]
+poncolorlapiz [0 0 0]
+pongrosor [0 80]
+bl
+ponrumbo 90
+av 999
+ponrumbo 180
+av 999
+ponrumbo 270
+av 999
+ponrumbo 0
+av 999
+pongrosor [0 5]
+fin
+
+para pos2
+
+activa 0
+ponpos :pos0
+ponrumbo :rumb0
+
+activa 1
+ponpos :pos1
+ponrumbo :rumb1
+
+activa 2
+sl
+ponpos :pos2
+ponrumbo :rumb2
+fin
+
+para rebotescool
+desviacion
+
+si pixel = [0 0 0] [
+  si (:rumb2<180) [si (:rumb2>90) [sisino (:mod1) = 0 [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa - :dv1]]]   ;abajo derecha 
+  si (:rumb2<270) [si (:rumb2>180) [sisino (:mod1) = 0 [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa + :dv1] [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa - :dv1]]]     ;abajo izquierda
+  si (:rumb2<90) [si (:rumb2>0) [sisino (:mod1) = 0 [ponrumbo 180 - :rumb2 + :dv1] [ponrumbo 180 - :rumb2 - :dv1]]]                            ;arriba derecha
+  si (:rumb2<360) [si (:rumb2>270) [sisino (:mod1) = 0 [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa + :dv1] [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa - :dv1]]]     ;arriba izquerd
+  ] 
+
+si pixel = [0 0 255] [
+  si (:rumb2<90) [si (:rumb2>0) [sisino (:mod1) = 0 [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa + :dv1] [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1]]]
+  si (:rumb2<180) [si (:rumb2>90) [sisino (:mod1) = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1]]]
+  ] 
+
+
+si pixel = [255 0 0] 
+  [
+    si (:rumb2<360) 
+      [
+        si (:rumb2>270) 
+        [
+          sisino (:mod1 = 0) 
+            [
+              haz "alfa 360 - :rumb2 ponrumbo :alfa + :dv1
+            ] 
+
+            [
+              haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1
+            ]
+        ]
+      ]
+
+    si (:rumb2<90) 
+      [
+        si (:rumb2>0) 
+          [
+            sisino (:mod1 = 0)
+              [
+                haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1
+              ] 
+
+              [
+                haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa - :dv1
+              ]
+          ]
+      ]
+  ]
+
+fin
+
+para rectangulo
+haz "posi0 pos
+sl
+av 30
+gd 90
+bl
+av 10
+gd 90
+av 100
+gd 90
+av 20
+gd 90
+av 100
+gd 90
+av 10
+gi 90
+sl
+ponpos :posi0
+fin
+
+para saqueazar
+
+haz "az0 azar 255
+haz "az1 azar 255
+haz "az2 azar 45
+haz "mod modulo :az0 2
+sisino (:mod = 0) [ponrumbo 90] [ponrumbo 270]
+haz "mod modulo :az1 2
+sisino (:mod = 0) [gd :az2] [gi :az2]
+fin
