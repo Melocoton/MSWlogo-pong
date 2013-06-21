@@ -81,7 +81,7 @@ activa 2
 bl 
 rebotescool
 poncolorlapiz [0 255 0]
-circulo 15
+circle 15
 poncolorrelleno [0 255 0]
 rellena
 sl
@@ -137,9 +137,9 @@ fin
 para rebotescool
 desviacion
 si pixel = [0 0 0] [
-si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa - :dv1]]   ;abajo derecha 
+si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa - :dv1]]        ;abajo derecha 
 si y (:rumb2<270) (:rumb2>180) [si :mod1 = 0 [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa + :dv1] [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa - :dv1]]     ;abajo izquierda
-si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [ponrumbo 180 - :rumb2 + :dv1] [ponrumbo 180 - :rumb2 - :dv1]]                            ;arriba derecha
+si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [ponrumbo 180 - :rumb2 + :dv1] [ponrumbo 180 - :rumb2 - :dv1]]                                                    ;arriba derecha
 si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa + :dv1] [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa - :dv1]]     ;arriba izquerda
 ] 
 si pixel = [0 0 255] [
@@ -148,7 +148,7 @@ si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 -
 ]
 si pixel = [255 0 0] [
 si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo :alfa + :dv1] [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1]]
-si y (:rumb2<90) (:rumb2>0)  [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1]]
+si y (:rumb2<270) (:rumb2>180)  [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1]]
 ]
 fin
 
