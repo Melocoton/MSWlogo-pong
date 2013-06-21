@@ -1,13 +1,1 @@
-----Rebotes (hecho) he encontrado un fallo cuando salen grados del tipo, 0 90 180 270, al tener que ser mayor o menor esos no estan incluidos y no rebotan,
-hay que poner alguna tonteria para eso
-tambien se cuela bastante en los bordes y se pone loco
-
----Crear un buen sistema de numeros aleatorios (no se si se podra llevar a cabo pero demomento vamos tirando con algun apaño)
----Cambiar el grosor de los circulos para ahorrarnos el rellena (menos el de la pelota)
----Cambiar las raquetas de un circulo a un rectangulido (hecho) pero hay que mejorar el procedimiento un poco
----Añadir rebotes a las raquetas
----Añadir que se puedan marcar puntos
----Sonidos (esto lo hago yo)
----Terminar el juego
----Enseñarselo a JC y que nos apruebe con un 13
-
+EL juego esta terminado, tan solo algun bug o alguna cosa para añadir, los bugs estan listados en la pestaña issues
