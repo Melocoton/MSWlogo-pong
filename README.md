@@ -1,4 +1,6 @@
 Juego de pong hecho en logo
 
-Leer el archivo TODO para saber que hay que hacer y/o donde nos quedamos
-En el archivo notas hay notas acerca del desarrollo
+El juego esta terminado.
+En el archivo notas hay notas sobre el funcionamiento del juego.
+En la pestaña issues estan algunos bugs por solucionar.
+En el archivo TDO esta listado lo anterior.
