@@ -62,6 +62,7 @@ haz "puntrojo 0
 
 siempre [
 marco
+marcador
 
 activa 0
 bl 
@@ -100,6 +101,20 @@ ot
 activa 2
 ot
 ]
+fin
+
+para marcador
+activa 3
+ot sl
+ponpos [-400 400]
+ponrumbo 90
+poncolorlapiz [1 1 1]
+pontamañotipo [[Arial] 100 0]
+rotula :puntrojo
+ponpos [400 400]
+rotula :puntazul
+poncolorlapiz [0 0 0]
+activa 2
 fin
 
 para marco
@@ -233,4 +248,3 @@ si :mod = 0 [ponrumbo 90] [ponrumbo 270]
 haz "mod modulo :az1 2
 si :mod = 0 [gd :az2] [gi :az2]
 fin
-
