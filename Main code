@@ -63,6 +63,7 @@ haz "puntrojo 0
 siempre [
 marco
 marcador
+subliminales
 
 activa 0
 bl 
@@ -111,7 +112,7 @@ ponrumbo 90
 poncolorlapiz [1 1 1]
 pontamañotipo [[Arial] 100 0]
 rotula :puntrojo
-ponpos [400 400]
+ponpos [350 400]
 rotula :puntazul
 poncolorlapiz [0 0 0]
 activa 2
@@ -247,4 +248,21 @@ haz "mod modulo :az0 2
 si :mod = 0 [ponrumbo 90] [ponrumbo 270]
 haz "mod modulo :az1 2
 si :mod = 0 [gd :az2] [gi :az2]
+fin
+
+para subliminales
+activa 4
+ot sl
+ponpos [-300 -300]
+ponrumbo 90
+poncolorlapiz [1 1 1]
+pontamañotipo [[Arial] 100 0]
+haz "subON azar 255
+haz "subl azar 3
+si :subON>250 [
+si :subl=0 [rotula [The cake is a lie]]
+si :subl=1 [rotula [Surrender]]
+si :subl=2 [rotula [No imagination]]
+si :subl=3 [rotula [Obey the authority]]
+]
 fin
