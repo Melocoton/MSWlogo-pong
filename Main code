@@ -187,6 +187,7 @@ haz "az1 azar 45
 haz "mod modulo :az0 2
 
 si pixel = [250 0 0] [
+tono [500 800]
 haz "puntazul :puntazul + 1
 ponpos [0 0]
 si :mod = 0 [ponrumbo 270 + :az1] [ponrumbo 270 - :az1]
@@ -194,6 +195,7 @@ espera 20
 ]
 
 si pixel = [0 0 250] [
+tono [500 800]
 haz "puntrojo :puntrojo + 1
 ponpos [0 0]
 si :mod = 0 [ponrumbo 90 + :az1] [ponrumbo 90 - :az1]
@@ -204,18 +206,18 @@ fin
 para rebotescool
 desviacion
 si pixel = [0 0 0] [
-si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa - :dv1]]        ;abajo derecha 
-si y (:rumb2<270) (:rumb2>180) [si :mod1 = 0 [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa + :dv1] [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa - :dv1]]     ;abajo izquierda
-si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [ponrumbo 180 - :rumb2 + :dv1] [ponrumbo 180 - :rumb2 - :dv1]]                                                    ;arriba derecha
-si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa + :dv1] [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa - :dv1]]     ;arriba izquerda
+si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa + :dv1 tono [300 200]] [haz "alfa 180 - :rumb2 ponrumbo 90 - :alfa - :dv1 tono [350 200]]]        ;abajo derecha 
+si y (:rumb2<270) (:rumb2>180) [si :mod1 = 0 [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa + :dv1 tono [300 200]] [haz "alfa :rumb2 - 180 ponrumbo 360 - :alfa - :dv1 tono [350 200]]]     ;abajo izquierda
+si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [ponrumbo 180 - :rumb2 + :dv1 tono [300 200]] [ponrumbo 180 - :rumb2 - :dv1 tono [350 200]]]                                                    ;arriba derecha
+si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa + :dv1 tono [300 200]] [haz "alfa 360 - :rumb2 ponrumbo 180 + :alfa - :dv1 tono [350 200]]]     ;arriba izquerda
 ] 
 si pixel = [0 0 255] [
-si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa + :dv1] [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1]]
-si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1]]
+si y (:rumb2<90) (:rumb2>0) [si :mod1 = 0 [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa + :dv1 tono [300 200]] [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1 tono [350 200]]]
+si y (:rumb2<180) (:rumb2>90) [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1 tono [300 200]] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1 tono [350 200]]]
 ]
 si pixel = [255 0 0] [
-si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo :alfa + :dv1] [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1]]
-si y (:rumb2<270) (:rumb2>180)  [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1]]
+si y (:rumb2<360) (:rumb2>270) [si :mod1 = 0 [haz "alfa 360 - :rumb2 ponrumbo :alfa + :dv1 tono [300 200]] [haz "alfa 90 - :rumb2 ponrumbo 270 + :alfa - :dv1 tono [350 200]]]
+si y (:rumb2<270) (:rumb2>180)  [si :mod1 = 0 [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1 tono [300 200]] [haz "alfa 90 + :rumb2 ponrumbo 90 - :alfa + :dv1 tono [350 200]]]
 ]
 fin
 
