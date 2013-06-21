@@ -1,1 +1,9 @@
-no se eliminarlo
+El juego esta terminado
+
+Simplemente copiar el codigo y ejecutar la instruccion juego
+Se puede cambiar la dificultad cambiando la variable :velocidad (1-dificil 2-normal)
+Algun pequeño bug ocasional por solucionar
+Los parpadeos no se pueden solucionar, es problema del creador del MSWlogo
+El juego no termina nunca (tal vez se le añada esta opcion en algun futuro)
+Aveces la pelota pierde la trayectoria o se queda atrapada, darle a alto y reiniciar el juego (talvez tambien se solucione en un futuro)
+Las letras que parpadean aveces son mensajes subliminales
